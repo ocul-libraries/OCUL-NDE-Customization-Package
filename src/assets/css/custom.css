@@ -1,0 +1,16 @@
+/**
+ * Custom link and button colours
+ * Use the code below to update the primary link and button colour throughout the NDE interface. 
+ * Note: Verify that the colour contrast ratio meets WCAG 2.1 AA accessibility standards.
+ * See: https://webaim.org/resources/contrastchecker/ to verify colour contrast.
+ */
+
+/* :root {
+    --omni-link-color: #187bb4;
+    --sys-primary: var(--omni-link-color);
+}
+
+main a, 
+button.mat-mdc-button:not(:disabled) {
+    color: var(--omni-link-color);
+} */

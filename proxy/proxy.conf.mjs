@@ -1,7 +1,16 @@
 import {PROXY_TARGET} from "./proxy.const.mjs";
 
-
+// The first rule below was added by Adam to allow the existing customization package from the backend proxy server to work.
 const proxyRules = [
+  // {
+  //   context: [
+  //     '/nde/custom/01OCUL_*/**'
+  //   ],
+  //   target: PROXY_TARGET,
+  //   secure: true,
+  //   changeOrigin: true,
+  //   logLevel: 'debug',
+  // },
   {
     context: [
       '/nde/custom/**'

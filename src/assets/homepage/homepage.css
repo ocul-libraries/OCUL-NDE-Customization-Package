@@ -1,0 +1,58 @@
+@use "src/app/styles/nde-variables" as vars;
+@use "src/app/styles/nde-mixing" as mixing;
+
+.main-landing-page {
+  width: vars.$responsiveWidth;
+  @include vars.set-responsive-width;
+  
+  margin: 0 auto;
+  gap: 1.5rem;
+
+  //need to delete when the Featured Books will be developed
+  margin-block-end: 100px;
+
+  @include mixing.respond-to('xsmall') {
+    width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--sys-primary);
+  }
+
+  #welcome-omni-container {
+    align-items: stretch;
+
+    & > div {
+      flex-grow: 1;
+    }
+  }
+
+  .card {
+    background-color: var(--sys-inverse-on-surface);
+    border-radius: 10px;
+    padding: 1.5rem;;
+
+    h2, h3, h4 {
+      margin-bottom: 1.5rem !important;
+    }
+
+    ul {
+      list-style: disc;
+      margin-left: 2rem !important;
+      margin-bottom: 1.5rem !important;
+    }
+  }
+
+  #what-is-omni .title {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #welcome-omni-container {
+    flex-direction: column;
+    margin-left: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+}
