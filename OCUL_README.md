@@ -36,7 +36,7 @@
 ### Note
 - Please make sure that you match the file path and name exactly, as it will not work if they don't match. 
 
-## [Optional] Customze link an button colours
+## [Optional] Customze link and button colours
 ### Procedure
     1. In your customization package, edit assets/css/custom.css
     2. Uncomment and customize the code under "Custom link and button colours"
