@@ -2,6 +2,11 @@
 
 This file outlines the customizations that are included in this code base.
 
+## General Customizations
+Include your customization package code in `/src/assets` to customize the home page and provide custom logos, CSS, and JavaScript. Files in the `src/assets` directory will automatically get included in the customization package when it is built with `npm run build`.
+
+## Custom Components
+
 ### OCUL Location Items Filter
 This component simply expands the location item filters by default when viewing the full display of a record that contains multiple items (Under the Locations heading).
 
