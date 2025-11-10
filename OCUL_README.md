@@ -3,6 +3,7 @@
 ## Starting the proxy
 
 1. Run: `nvm use v22.12`
+2. [First time only] Run `npm install`
 2. Run `npm run start:proxy`
 3. Go to: http://localhost:4201/nde/home?vid=[your-view-code]&lang=en
 
