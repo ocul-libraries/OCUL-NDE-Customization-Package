@@ -1,14 +1,17 @@
 # OCUL Readme
 
-## Starting the proxy
+## Starting the proxy for local development
+Use the following to get a local development server running.
 
+### Dependencies
+1. Install nvm by following the directions outlined in the README.md file.
+2. Install node v22.12 by running `nvm install v22.12`
+
+### Starting the server
 1. Run: `nvm use v22.12`
-2. [First time only] Run `npm install`
-2. Run `npm run start:proxy`
-3. Go to: http://localhost:4201/nde/home?vid=[your-view-code]&lang=en
-
-### Note
-- At the moment assets do not work with the proxy, so this can't be used to preview changes from src/assets (icons, custom.js, homepage, etc). See: https://github.com/ExLibrisGroup/customModule/issues/3
+2. If you've never run the server before, install the dependencies by running `npm install`
+3. Run `npm run start:proxy`
+4. Go to: http://localhost:4201/nde/home?vid=[your-view-code]&lang=en
 
 ## Building your customization package
 1. Ensure your instituion and view IDs are set in `build-settings.env`
@@ -19,7 +22,7 @@
 ## Customizing your institution's logo
 ### Procedure
 
-1. Inside of your customization package, delete the existing logo file at `src/assetsimages/library-logo.png`
+1. Inside of your customization package, delete the existing logo file at `src/assets/images/library-logo.png`
 2. Replace this image with your own logo, also named `library-logo.png`
 
 ### Note
@@ -27,6 +30,7 @@
 - Ensure that your image has a maximum width of 300 px, and a maximum height of 100 px.
     - When scaling your logo image, it's recommended to scale your image to fit the maximum width of 300px and let the software automatically calculate the resulting height. This will preserve the original aspect ratio of the logo file and avoid logo files that appear stretched or squished. 
 - Ensure that your logo file does not exceed 30 KB in size. 
+- Note that a wider logo image can crowd the main navigation and may require some CSS adjustments
 
 ## Customizing your favicon
 
@@ -57,3 +61,6 @@ By default, the home page styles will automatically use the styles provided by t
 Most of the predefined themes in the NDE UI seem like feasible choices. All seem to have sufficient contrast for links and buttons out of the box. 
 
 It is recommended to avoid choosing the Brown or Charcoal themes as the link colour in those themes makes it difficult to discern links from regular text in the UI.
+
+## Customizations
+For information about the custom elements included in this customization package, see `OCUL_CUSTOMIZATIONS.md`.
