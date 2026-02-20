@@ -62,5 +62,28 @@ Most of the predefined themes in the NDE UI seem like feasible choices. All seem
 
 It is recommended to avoid choosing the Brown or Charcoal themes as the link colour in those themes makes it difficult to discern links from regular text in the UI.
 
-## Customizations
+## Style (CSS) Customizations
+Global CSS customizations can be provided in the `src/app/assets/css/custom.css` file. CSS rules defined here will be included on every page in the NDE view.
+
+## JavaScript (JS) Customizations
+Global JS customizations can be provided in the `src/app/assets/js/custom.js` file. JavaScript code included in this file will be included on every page in the NDE view.
+
+## Advanced Customizations by Extending or Overriding NDE Elements With Custom Angular Components
+To further customize the NDE interface, you can extend or override NDE components with your own implementation. [Step 4 in the README](https://github.com/ocul-libraries/OCUL-NDE-Customization-Package/blob/master/README.md#step-4-code-scaffolding-and-customization) file provides instructions for how to use the Angular CLI tool to generate your own angular component, and enable it in your customization package. 
+
+Customizing the NDE in this way has a higher barrier to entry because it requires knowledge of the Angular framework, but has several advantages:
+- The customizations are constrained to the component, and will not create unintentional side-effects in other areas of the NDE (for example, unintentionally affecting CSS styles in other parts of the application)
+- You can attach custom components to existing ex libris elements, and in doing so gain access to their internal state data
+- You can access application data from within the global application state, via the [ngrx store](https://ngrx.io/guide/store)
+- You can add logic at various points in the [Angular lifecycle](https://angular.dev/guide/components/lifecycle), and [subscribe to observables](https://rxjs.dev/guide/observable) to react to changes in the application state
+
+### Useful Resources for Creating or Customizing Angular Components
+- [Customizing the NDE UI – Live Demo | ELUNA 2025](https://www.youtube.com/watch?v=j6jAYkawDSM)
+- The [angular documentation](https://angular.dev/overview)
+- The [ngrx store documentation](https://ngrx.io/guide/store) for getting data from the store
+- The [RxJS documentation on observables](https://rxjs.dev/guide/observable)
+- The [Redux DevTools browser extension](https://chromewebstore.google.com/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd) for inspecting state data in the NDE (also available for other browsers)
+- This [blog post demonstrates how to interact with the store to get values out of the record PNX data in the NDE](https://developers.exlibrisgroup.com/blog/nde-customization-how-to-build-a-component-that-requires-values-from-the-pnx/)
+
+## OCUL Customizations
 For information about the custom elements included in this customization package, see `OCUL_CUSTOMIZATIONS.md`.
